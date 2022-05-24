@@ -2,6 +2,7 @@
 #include <cmath>
 #include <functional>
 #include <vector>
+#include <limits>
 
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "OCUnusedGlobalDeclarationInspection"
@@ -327,26 +328,26 @@ double runge(
 
 int main() {
     // Примеры для интегралов
-    /*std::cout << math::integral_rec(0.2, 0.6, integral_2) << "\n";
-    std::cout << math::integral_trap(0.2, 0.6, integral_2) << "\n";
-    std::cout << math::integral_simp(0.2, 0.6, integral_2) << "\n";
-    std::cout << runge(0.2, 0.6, math::integral_simp, integral_2) << "\n";*/
+    std::cout << math::_2::integral_rec(0.2, 0.6, integral_2) << "\n";
+    std::cout << math::_2::integral_trap(0.2, 0.6, integral_2) << "\n";
+    std::cout << math::_2::integral_simp(0.2, 0.6, integral_2) << "\n";
+    std::cout << runge(0.2, 0.6, math::_2::integral_simp, integral_2) << "\n";
 
     // Примеры для нелинейных уравнений
-    /*std::cout << math::newtone_method(0, 0.0001, equation, derivative) << "\n";
-    std::cout << math::dichtomia(-3, -1.75, 0.0001, equation) << "\n";*/
+    std::cout << math::_3::newtone_method(0, 0.0001, equation, derivative) << "\n";
+    std::cout << math::_3::dichtomia(-3, -1.75, 0.0001, equation) << "\n";
 
     // Примеры для нахождения локального минимума и количества итераций
-    /*unsigned counter = 0;
+    unsigned counter = 0;
 
-    std::cout << math::golden_ratio(-10, 10, 0.001, equation_2, &counter) << "\n";
-    std::cout << counter << "\n";*/
+    std::cout << math::_4::golden_ratio(-10, 10, 0.001, equation_2, &counter) << "\n";
+    std::cout << counter << "\n";
 
     // Примеры для нахождения локального минимума в пространстве и количества итераций
-    /*unsigned counter = 0;
+    counter = 0;
 
     auto aboba = math::_5::GradDown({ 0, 0 }, 0.001, equation_3, grad, &counter);
-    std::cout << aboba.x << " " << aboba.y << " " << counter << "\n";*/
+    std::cout << aboba.x << " " << aboba.y << " " << counter << "\n";
 }
 
 #pragma clang diagnostic pop

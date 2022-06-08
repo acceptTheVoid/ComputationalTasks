@@ -25,5 +25,6 @@ double atanh(double x) {
 }
 
 int main() {
-    std::cout << "Разница моей функции с библиотечной ~равна: " << fabs(atanh(0.5) - std::atanh(0.5)) << "\n";
+    double x; std::cin >> x;
+    std::cout << "Разница моей функции с библиотечной ~равна: " << fabs(atanh(x) - std::atanh(x)) << "\n";
 }
